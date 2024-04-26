@@ -3,9 +3,11 @@
 <br>
 
 ![Aggregated](https://github.com/regybean/SiameseMSDiagnosis/blob/main/imgs/aggregated_diagram.PNG)
+
 Aggregated Siamese network architecture
 
 ![Contrastive](https://github.com/regybean/SiameseMSDiagnosis/blob/main/imgs/contrastive_diagram.PNG)
+
 Contrastive Siamese network architecture
 
 ## Method
