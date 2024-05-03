@@ -6,7 +6,6 @@ import torch
 import torch.nn.functional as F
 import torchvision
 
-
 seed = 14
 torch.manual_seed(seed)
 torch.cuda.manual_seed(seed)

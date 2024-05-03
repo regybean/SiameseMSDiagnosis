@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-
 from torch.utils.tensorboard import SummaryWriter
 import numpy as np
 import random
