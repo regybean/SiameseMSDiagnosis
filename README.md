@@ -12,9 +12,9 @@ Contrastive Siamese network architecture
 
 ## Method
 
--"Multiple sclerosis (MS) is a chronic neurological disorder that targets the central nervous system, causing demyelination and neural disruption, which can include retinal nerve damage leading to visual disturbances. The purpose of this study is to demonstrate the capability to automatically diagnose MS by detecting asymmetry within the retina, using a similarity-based neural network, trained on optical coherence tomography images. This work aims to investigate the feasibility of a learning-based system accurately detecting the presence of MS, based on information from pairs of left and right retina images. We also justify the effectiveness of a Siamese Neural Network for our task and present its strengths through experimental evaluation of the approach. We train a Siamese neural network to detect MS and assess its performance using a test dataset from the same distribution as well as an out-of-distribution dataset, which simulates an external dataset captured under different environmental conditions. Our experimental results demonstrate that a Siamese neural network can attain accuracy levels of up to 0.932 using both an in-distribution test dataset and a simulated external dataset. Our model can detect MS more accurately than standard neural network architectures, demonstrating its feasibility in medical applications for the early, cost-effective detection of MS."
+Multiple sclerosis (MS) is a chronic neurological disorder that targets the central nervous system, causing demyelination and neural disruption, which can include retinal nerve damage leading to visual disturbances. The purpose of this study is to demonstrate the capability to automatically diagnose MS by detecting asymmetry within the retina, using a similarity-based neural network, trained on optical coherence tomography images. This work aims to investigate the feasibility of a learning-based system accurately detecting the presence of MS, based on information from pairs of left and right retina images. We also justify the effectiveness of a Siamese Neural Network for our task and present its strengths through experimental evaluation of the approach. We train a Siamese neural network to detect MS and assess its performance using a test dataset from the same distribution as well as an out-of-distribution dataset, which simulates an external dataset captured under different environmental conditions. Our experimental results demonstrate that a Siamese neural network can attain accuracy levels of up to 0.932 using both an in-distribution test dataset and a simulated external dataset. Our model can detect MS more accurately than standard neural network architectures, demonstrating its feasibility in medical applications for the early, cost-effective detection of MS.
 
-[[Bolton, Atapour-Arbarghouei et al, TBD, 2024]()]
+[Diagnosis of multiple sclerosis by detecting asymmetry within the retina using a similarity-based neural network](https://ieeexplore.ieee.org/document/10516432)
 
 ---
 
@@ -26,7 +26,7 @@ Contrastive Siamese network architecture
 $ git clone https://github.com/regybean/SiameseMSDiagnosis.git
 $ cd SiameseMSDiagnosis
 ```
-* A dataset must be used for training. In our experiments, we use the [IDK]() dataset. Any similar dataset with the same structure according to the custom training dataset classes in (datasets.py) will work. Feel free to modify the scipt or dataset class to fit your own purposes. Our custom dataset follows the following directory structure:
+* A dataset must be used for training. Any similar dataset with the same structure according to the custom training dataset classes (in datasets.py) will work. Feel free to modify the scipt or dataset class to fit your own purposes. We have included sample data for testing. Our dataset follows the following directory structure:
 
 ```
 OCTdata
@@ -61,7 +61,7 @@ OCTdata
 * To train the model, run the following command:
 
 ```
-$ python train.py --model=model --dataset_path=./path/to/data
+$ python train.py --model=model --dataset_path=path/to/data
 ```
 
 * A full list of arguments can be found in the respective python files
@@ -74,18 +74,19 @@ $ python train.py --model=model --dataset_path=./path/to/data
 * In order to test the model, run the following command:
 
 ```
-python test.py --model_path=yourmodel.pt
+python test.py --model_path=path/to/yourmodel.pt
 ```
 
 ## Reference
-[Diagnosis of multiple sclerosis by detecting asymmetry within the retina using a similarity-based neural network]()
-(authors)
+[Diagnosis of multiple sclerosis by detecting asymmetry within the retina using a similarity-based neural network](https://ieeexplore.ieee.org/document/10516432)
+RC Bolton, R Kafieh, F Ashtari, A Atapour-Abarghouei
 ```
-@InProceedings{,
-  author = {},
-  title = {},
-  year = {2024},
-  publisher = {IEEE}
+@article{bolton2024diagnosis,
+  title={Diagnosis of multiple sclerosis by detecting asymmetry within the retina using a similarity-based neural network},
+  author={Bolton, Regan Cain and Kafieh, Rahele and Ashtari, Fereshteh and Atapour-Abarghouei, Amir},
+  journal={IEEE Access},
+  year={2024},
+  publisher={IEEE}
 }
 ```
 
