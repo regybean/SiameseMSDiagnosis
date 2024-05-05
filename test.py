@@ -31,7 +31,7 @@ parser.add_argument('--batch_size', default=16, type=int, help='It is the size o
 args = parser.parse_args()
 
 # Loads the given model 
-model_args = torch.load("models/" + args.model_path)
+model_args = torch.load(args.model_path)
 seed = model_args['seed']
 
 # Fixes all random proccess
@@ -79,7 +79,8 @@ def test(model, device, test_loader, loss_function, metrics):
                 target = (target.float(),)
                 loss_inputs += target
                 
-            pred = torch.where(outputs[0] > 0.5, 1, 0)    
+            pred = torch.where(outputs[0] > 0.5, 1, 0)
+            print(f'\nPredictions = {pred},\nTargets = {target[0]}')      
             
             # Calculate the loss
             loss_outputs = loss_function(*loss_inputs)
